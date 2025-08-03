@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -7,10 +7,12 @@ const ContactPage = () => {
     message: "",
   });
 
+  // Handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form submitted: " + JSON.stringify(formData));
